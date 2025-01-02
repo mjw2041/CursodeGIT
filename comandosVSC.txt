@@ -1,0 +1,123 @@
+/**
+ Atajos de Teclados
+ ==================
+ 
+ Referencia
+ ==========
+ *    <c> --- ctrl
+ *    <s> --- shift
+ *    <a> ---- alt
+ *    <f> ---- Tecla de Funcion
+    
+Atajos
+======
+ *  <c> + <s> + p           ---> paleta de comandos
+ *      a> word wrap acomoda el tenxto en varias lineas
+        b> open keyword shotcut
+        c> configure snippets       
+ *  <c> a                  ----> Seleccionar todo
+ *  <c> b                  ----> abrir y cerrar panel izquierda
+ *  <c> f                  ----> abrir explorador de archivo para buscar
+ *  <c> g                  ----> ir a la linea nro ...
+ *  <c> h                  ----> buscar y reemplazar
+ *  <c> i                  ----> abrir buscador de Snippets
+ *  <c> j                  ----> abrir panel inferior
+ *  <c> k 
+ *        t                ----> muestra los temas habilitados|
+ *        c                ----> convertir una linea en comentario
+          z                ----> modo ZEN
+ *  <c> l                  ----> Agregar linea seleccionada
+ *  <c> s                  ----> guardar
+          m                ----> Editor de problemas 
+          l                ----> para reeplazar varios a la vr 
+ *  <c> o                  ----> abrir archivo
+ *  <c> n                  ----> nueva ventana
+ *  <c> w                  ----> cerrar ventana
+ *  <c> + -                ----> manejo del zoom
+
+ *  <s> f                  ----> 
+ *       a abajo o arriba ----> copia la linea
+
+ *  <f12>                  ----> explicacion o help
+
+ *  <a> clck linea         ----> se crean varios cursores
+ *  <a> abajo o arriba     ----> Sube o baja la lina
+ *  <a> z                  ----> wordwrap        
+ 
+ 
+ Seteos recomenddos ( <c> <s> p + Open User Settings (JSON) )
+ ==================
+ Abrir con <c> <s> p + Open User Settings (JSON)
+
+
+    "files.autoSave": "afterDelay", 
+    "workbench.colorTheme": "Monokai",     /* Color del tema */
+    "editor.linkedEditing": true,  /* Esta habilitado el control de etiquetas de apertura y cierre */
+    "liveServer.settings.donotVerifyTags": true,
+    "workbench.editor.enablePreview": true /* Abre los archivos en distintas pestañas */,
+    "files.autoSave": "afterDelay",  /* Graba despues del delay"*/
+    "files.autoSaveDelay": 10000,   /*Establece el tamaño de dalay se expresa en milisegundos ---> 1000 = 1 segundo*/
+    "files.exclude": {   /*los archivos que exclute o incluye en la lista*/
+            "**/.git": true,
+            "**/.svn": true,
+            "**/.hg": true,
+            "**/CVS": true,
+            "**/.DS_Store": true,
+            "**/Thumbs.db": true
+    }, 
+    "terminal.integrated.fontSize": 20, /* Aumenta el tamano de la letra del terminal */
+    "editor.fontSize": 16, /* Aumenta el tamano de la letra del editor */
+    "editor.tabSize": 6, /* Aumenta el tamano del tab */
+    /*"window.zoomLevel": 0 /*Nivel de zoom */ 
+    "editor.renderLineHighlight": "line",  /* Resalta la linea */
+    "editor.rulers": [1,80], /* Aparacen linea para determinar desde - hasta donde escribir */
+    "editor.mouseWheelScrollSensitivity": 1, /* Sesibilidad el mouse */
+    "editor.smoothScrolling": false /* Se maneja el deslizamiento del mouse */    
+    "editor.snippetSuggestions": "top" /* Lo primero que ofrece es el snippets */
+
+
+Extensiones recomendadas
+========================
+ *   Generales
+ *   Pretier
+ *   Palenight
+ *   Git Lens
+ *   IntelliCode
+ *   Desarrollo WEB
+ *   liveServer 
+ *   indent-rainbow
+  
+Snippet: 
+========
+Defincion: permite asignar una linea de codigo  a un nombre y despues agregarlos en el codigo usando solo el nombre
+Estos se guardan el los achivos <lenguaje.json>, por ejemplo javascripts.json
+Se los convoca por prefix, se recomienda que comiencen con "_"
+Ejemplo
+  {
+	 "crearFunciones": {
+	 	"prefix": "_fnc",
+	 	"body": [
+	 		"function ${1:nombre} ( ${2:parametro} ) {",
+			"     ${3:codigo}",
+			"}"
+	
+	 	],
+	 	"description": "Crear Funciones"
+	 }
+
+
+Se puede usar la variable CLIPBOARD, la cual cambiar el codigo por lo esta guardado en el BUFFER del windows
+      
+EMET
+====
+Defincion es un plugins incorporado en VSC que ayuda la programacion CSS y HTML
+Funciona solo en archivos html 
+Cualquier texto que escriba me lo cambia a etiqueta, dentro de las etiquetas body <body>
+
+Git
+===
+ABRIR UNA TERMINAL GIT-BUSH
+INICIALIZAR -- GIT INIT
+
+
+  
