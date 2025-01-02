@@ -1,3 +1,5 @@
+DATOS PARA USAR GIT HUB
+
 git remote add origin https://github.com/mjw2041/Laboratorio.git
 git branch -M main
 git push -u origin main

@@ -1,5 +1,5 @@
 /**
- Atajos de Teclados
+ Atajos de Teclados ( muy usado)
  ==================
  
  Referencia
@@ -117,7 +117,7 @@ Cualquier texto que escriba me lo cambia a etiqueta, dentro de las etiquetas bod
 Git
 ===
 ABRIR UNA TERMINAL GIT-BUSH
-INICIALIZAR -- GIT INIT
+INICIALIZAR -- GIT INIT ---
 
 
   
