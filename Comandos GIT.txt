@@ -1,0 +1,97 @@
+URL: 
+Comandos GIT
+Lugares
+   Repositorio Local
+   Staging Area ( area de Preparacion )
+   Lugar de Trabajo
+
+Niveles de usuario
+   system -- Todo el sistema 
+   global -- Todos los repositorios del usuario
+   local   -- Es Repositorio en particular
+Se tiene prioridad desde el mas paqueño( primero ) al mas alto   
+
+git config --global      
+
+git config -- <nivelUsuario> -- variable
+git config --global user.name "Weihmüller, Maximiliano" ---> conf nombre usuario
+git config --global user.email "MWeihmuller72@hotmail.com" ---> conf mail
+git config --list "MWeihmuller72@hotmail.com" ---> muestra las configuraciones 
+git config --global --list  --- lista las configuraciones a nivel global      
+git config --global core.editor  --- configuracion del editor
+     git config --global core.editor "code --wait" 
+             --- Utiliza visual studio code como editor
+                    -- wait confirme el mensaje hasta que no cerremos el editor de codigo
+git config --global color.ui true --- Configuracion color
+git config --global core.autocrlf true  --- configuracion del retorno de carro ( solo en windows )
+git config --global core.autocrlf input  --- configuracion del retorno de carro ( solo en ubuntu )
+           --global core.abbrev 9 configura a 9 caracteres en nombre del hash
+git config --global alias.comando  "nombre del alias"  -----Se genera el alias un comando 		   
+
+COMANDO
+=======
+git config  --- configuracion
+git init --- Inicializar el repositorio
+ls --- listar archivos
+   -a muestra los subdirectorios ocultos
+pwd --- nos dice donde estamos
+git add nombre de archivo -- Sube el archivo al area de Preparacion
+     . --- Sube todo los archivos
+git status --- Estado 
+   - s --- Version Reducida
+git rm --cached nombre del archivo ---> Borra el archivo del area de preparacion
+git commit -m "mensaje" -a --- Subir al repositorio dejando un mensaje.
+           -a Se saltea el comando git add, lo hace en forma automatica.
+           --amend Abre el VSC, se pueden hacer cambios y actualizar ese commit con lo que hay en el stage
+git restore --- Devuelvo un archivo eliminado aquellas eliminacion de archivos que no se comitiaron
+git checkout --- Vuelva atras los cambios que se le hizo a un archivo tomandolo del staging
+
+git show --- muestra el archivo por dentro ( no lo entiendo bien )
+git diff 
+         -- staged compara el lugar de staged con el repositorio
+         <1 hash> <2hash> Compara dos repositorios
+         --name-only <1 hash> <2hash> Muestra solo el nombre de los archivos que cambiaron  	
+         --word-dif <1 hash> <2hash>  Muestra las lineas que cambiaron
+git log              --- Te muestra todos los commit realizados
+        --- oneline --- lo muestra en una sola linea 
+					 --all 	lo muestra en una sola linea todos los commit de todas las lineas
+git reset --soft <nombre del commit> --- se posiciona el head en el commit seleccionado, todos los commit de arriba se borran
+          --soft head~1 <cantidad de head hacia abajo > otra forma git reset
+          --mixed <nombre del commit> 
+          --hard ---> Es definitivo. Se usa para separar merge de otras ramas		  
+		  
+git branch --- nos muestra todas las ramas que tengo creada
+git branch <nombre de la rama>    --- Crea una rama, se aconseja utilizar el formato kabak-case
+                               -d --- Elimina la rama ( ojo no tenemos que estar en esa rama )
+           -m <nombre de la rama> <nuevo nombre de la rama> ( si no estamos en la rama )
+		   -m <nuevo nombre de la rama> ( si estamos en la rama ) 
+git checkout <nombre de la rama>     --- Se mueve a la rama nombre de la rama
+                                 - b --- crea una rama y se mueva
+git switch <nombre de la rama> 
+                               -c crea una rama y se mueva   
+git merge <nombre de la rama a optimizar> --- unir las dos rama 							   
+    
+git merge conflict-branch --- muestras los conflictos
+   Accept Current Change --- me quedo con lo que esta en la rama donde estoy
+   Accept Incoming Change -- acepto lo que esta en la otra rama
+   Accept Both Change --- Acepta los dos cambioe
+   Compare Change   --  Permite los cambios  
+
+.gitignore -- Se colocan todos los archivos para ignorar
+   # vamos a ignorar el archivo ignorar.txt. Se ingnoran todos los archivos 
+   # creados despues del cambio en el .gitingnore
+   # (#)  comentario
+     ignorar.txt
+   # vamos a la carpeta ignorar
+     ./ignorar
+     ./adentro/ignorar
+     ./adentro/i.txt
+   # ignora todo los txt
+     *.txt
+   # para que no tenga en cuenta la ignore (!)
+     !readme.txt
+
+git show --name-only --oneline <commit_hash>
+
+git config --global core.excludesfile <NOMBRE DE ARCHIVO> -- esto es un gitignore Global
+
